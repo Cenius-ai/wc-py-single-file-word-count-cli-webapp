@@ -1,0 +1,20 @@
+Counting words before you publish
+
+Most editors ship a word count buried in a status bar. That is fine while you
+are writing, and useless the moment you are scripting: a build step, a docs
+lint, or a CI job that fails when a README drifts past its agreed budget.
+wc.py exists for that narrow job. It takes one path, reads the text, splits it
+on runs of whitespace -- spaces, tabs, newlines, and the non-breaking space
+inside "&nbsp;" once decoded -- and prints a single integer.
+
+The contract is intentionally boring. One argument in, one number out, zero
+config, no network, and no writes. Errors are plain sentences on stderr with a
+non-zero exit status, so a shell script can branch on the result without
+parsing prose. Under the hood it is a hundred lines of standard-library Python,
+which means it runs anywhere a Python 3 interpreter does.
+
+A practical note on pacing: rerun the count after every structural edit rather
+than at the end of the draft. Deltas are easier to reason about than totals,
+and the habit keeps the final trim honest.
+
+-- The wc-py maintainers
