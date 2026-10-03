@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wc-py"
+version = "1.0.0"
+description = "Count the whitespace-separated words in one text file."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "wc-py maintainers" }]
+keywords = ["word-count", "cli", "text"]
+classifiers = [
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing",
+]
+# The tool itself is standard library only: no runtime dependencies.
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+wc-py = "wc:main"
+
+[project.urls]
+Homepage = "https://example.invalid/wc-py"
+
+[tool.setuptools]
+py-modules = ["wc"]
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = ["test_*.py"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"

@@ -1,0 +1,6 @@
+# wc-py test runner.
+#
+# The shipped tool (wc.py) imports nothing outside the Python standard library.
+# The only declared dependency is the test runner required by the project's own
+# suite, kept to a range that any pytest 8 or 9 satisfies.
+pytest>=8.0

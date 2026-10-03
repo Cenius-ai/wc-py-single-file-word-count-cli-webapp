@@ -1,0 +1,23 @@
+# Secrets and local state (never committed)
+.env
+.env.*
+!.env.example
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Packaging / build output
+build/
+dist/
+*.egg-info/
+*.egg
+wheels/
+
+# Editors and OS noise
+.venv/
+venv/
+.DS_Store
+*.swp
