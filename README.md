@@ -88,7 +88,7 @@ _Full guide: [`USAGE.md`](USAGE.md)_
 
 ## Architecture
 
-Everything runs out of the box: a Full-stack app codebase (24 files). `install.sh` wires up dependencies and loads seed records; after it runs the app has real data to show. Top-level layout: `examples/`. Full setup details: [`INSTALL.md`](INSTALL.md).
+Everything runs out of the box: a Full-stack app codebase (17 files). `install.sh` wires up dependencies and loads seed records; after it runs the app has real data to show. Top-level layout: `examples/`. Full setup details: [`INSTALL.md`](INSTALL.md).
 
 ## FAQ
 
